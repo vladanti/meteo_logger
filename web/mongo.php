@@ -7,7 +7,7 @@ use MongoDB\Client as Mongo;
 $filter = [];
 $options = ['sort' => ['_id' => -1]]; // descending sort for last element
 // connect to database
-$mongo = new Mongo("mongodb://127.0.0.1:7443");
+$mongo = new Mongo("mongodb://your_db");
 $collection = $mongo->meteo->data;
 $bson = $collection->findOne($filter,$options);
 // lets convert mongodb bson to json
